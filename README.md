@@ -13,10 +13,9 @@ prequisites
 - flask...
 cd were app is installed
 
-export FLASK_APP=sensor-rest-api.py
-run flask
+python sensor-rest-api.py
 
-on some host
+On the same host
 
 curl http://127.0.0.1:5000/pollution
 2020-09-22 13:54:46.816 INFO     127.0.0.1 - - [22/Sep/2020 13:54:46] "GET /pollution HTTP/1.1" 200 -
