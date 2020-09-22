@@ -241,5 +241,5 @@ def get_weather_measurements():
            ', "humidity":' + str(humidity) + \
            '}'
 
-if __name == '__main__':
+if __name__ == '__main__':
     rest_api_app.run(debug=False, host='0.0.0.0')
