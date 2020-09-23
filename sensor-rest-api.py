@@ -124,7 +124,7 @@ def get_gas_measurements():
     # retrieve gas readings
     gas_readings = gas.read_all()
 
-    return '{ "instant":' + now.isoformat() + \
+    return '{ "instant":"' + now.isoformat() + '"' + \
            ', "adc":' + str(gas_readings.adc) + \
            ', "nh3":' + str(gas_readings.nh3) + \
            ', "oxidised":' + str(gas_readings.oxidising) + \
@@ -192,12 +192,12 @@ def get_pollution_measurements():
         values["gt5_0um"] = str(pm_values.pm_per_1l_air(5))
         values["gt10um"] = str(pm_values.pm_per_1l_air(10))
 
-    return '{ "instant":' + now.isoformat() + \
+    return '{ "instant":"' + now.isoformat() + '"' + \
            ', "PM1_0":' + values["PM1_0"] + \
            ', "PM2_5":' + values["PM2_5"] + \
            ', "PM10":' + values["PM10"] + \
            ', "PM1_0_atm":' + values["PM1_0_atm"] + \
-           ', “PM2_5_atm":' + values["PM2_5_atm"] + \
+           ', "PM2_5_atm":' + values["PM2_5_atm"] + \
            ', "PM10_atm":' + values["PM10_atm"] + \
            ', "gt0_3um":' + values["gt0_3um"] + \
            ', "gt0_5um":' + values["gt0_5um"] + \
@@ -235,7 +235,7 @@ def get_weather_measurements():
     pressure = bme280.get_pressure()
     humidity = bme280.get_humidity()
 
-    return '{ "instant":' + now.isoformat() + \
+    return '{ "instant":"' + now.isoformat() + '"' + \
            ', "temperature":' + str(temperature) + \
            ', "pressure":' + str(pressure) + \
            ', "humidity":' + str(humidity) + \
